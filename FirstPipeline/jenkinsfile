@@ -1,0 +1,64 @@
+pipeline {
+	agent any     
+	stages{
+		stage ('one'){
+			
+			steps{
+				echo "executing version VERSION"
+			}
+		}
+		stage ('Two'){
+			steps{
+				input("hi, do you wanna proceed?")
+			}
+			
+		}
+		stage('Example') {
+			steps {
+				withCredentials([usernamePassword(credentialsId: '75dfb4ed-7b1d-4d34-a0ff-c06422bbbf7b', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+				sh 'echo $USERNAME'
+				sh 'echo $PASSWORD'
+				// Use the $USERNAME and $PASSWORD variables in your script
+				}
+			}
+		}
+		stage ('Three'){
+		
+			when{
+				not {
+					branch "master"
+				}
+			}
+			steps {
+				echo "Hello"
+			}
+			
+		}
+		stage("Four"){
+			parallel {
+				stage("Unit Test"){
+					steps{
+						echo "Running the unit test"
+					}
+				}
+				stage("Integration Test"){
+					// agent {
+					// 	docker {
+					// 		reuseNode false
+					// 		image 'ubuntu'
+					// 	}
+					// }
+					steps{
+						echo "Running the integration test .."
+
+    
+    
+
+					}
+					
+				}
+			}
+		}
+	}
+
+}

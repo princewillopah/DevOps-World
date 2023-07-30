@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  jenkins:
+    container_name: my_jenkins_container
+    image: jenkins/jenkins:lts
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - "$PWD/my_jenkiins_files:/var/jenkins_files"

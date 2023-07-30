@@ -1,0 +1,6 @@
+Adding new file...
+
+Adding Merge Conflict
+Some other content
+
+Something new
