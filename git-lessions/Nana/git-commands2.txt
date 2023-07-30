@@ -1,0 +1,1 @@
+rm -ff <file>  # to remove a file in git

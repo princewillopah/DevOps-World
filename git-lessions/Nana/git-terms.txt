@@ -1,0 +1,2 @@
+- "Remote" refers to the hosted repository.
+- "Origin" is the pointer to where that remote is

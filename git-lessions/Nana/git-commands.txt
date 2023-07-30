@@ -1,0 +1,79 @@
+1. git init: Creates a new Git repository.
+	• --bare: Creates a bare repository without a working directory.
+	• --quiet or -q: Suppresses all output.
+2. git clone [url]: Clones a remote Git repository to the local machine.
+	• --depth=[number]: Limits the clone to a certain number of commits back in history.
+	• --branch=[name]: Clones only a specific branch.
+	• --single-branch: Clones only the specified branch.
+3. git add [file]: Adds a file to the staging area.
+	• -p: Interactively choose portions of the file to add to the staging area.
+	• -A or --all: Adds all changes to the staging area.
+4. git commit -m [message]: Creates a new commit with the changes in the staging area. Note that only staged files can be commited.
+	• -a or --all: Commits all changes, including untracked files.
+	• --amend: Modifies the previous commit.
+5. git status: Shows the current status of the repository.
+6. git push [remote] [branch]: Pushes the changes in the specified branch to the remote repository.
+	• --force or -f: Forces the push even if it results in non-fast-forward merges.
+	• --tags: Pushes all tags to the remote repository.
+7. git pull [remote] [branch]: Fetches changes from the remote repository and merges them with the local repository.
+	• --rebase: Rebases the local commits on top of the fetched changes.
+8. git branch: Shows a list of all branches in the repository.
+	• -r: Shows remote branches.
+	• -a: Shows both local and remote branches.
+9. git checkout [branch]: Switches to the specified branch.
+	• -b: Creates a new branch and checks it out.
+10. git merge [branch]: Merges the specified branch into the current branch.
+	• --no-ff: Forces a merge commit even if the merge is a fast-forward.
+11. git diff [file]: Shows the differences between the current state of the repository and a previous commit.
+	• --cached: Shows the differences between the staging area and the previous commit.
+12. git log: Displays the commit history of the repository.
+	• --oneline: Displays a condensed version of the commit history, showing only the commit message and hash.
+	• --graph: Displays a graphical representation of the commit history.
+13. git remote: Shows a list of all remote repositories associated with the current repository.
+	• -v: Shows the remote URLs.
+14. git fetch: Downloads new changes from the remote repository without merging them.
+	• --prune: Removes any remote-tracking branches that no longer exist on the remote repository.
+15. git merge --abort: Aborts a merge that is in progress.
+16. git rebase: Rewrites the commit history by applying changes from one branch to another.
+	• --onto [branch]: Limits the rebase to a specific branch.
+	• -i: Performs an interactive rebase, allowing you to modify the commit history.
+17. git reset [file]: Removes a file from the staging area.
+	• --soft: Keeps the changes in the staging area.
+	• --hard: Discards the changes in the working directory.
+18. git revert [commit]: Creates a new commit that undoes the changes made in a previous commit.
+	• -n or --no-commit: Reverts the changes but doesn't create a new commit.
+19. git stash: Saves changes in the working directory to a temporary area so that they can be retrieved later.
+	• save [message]: Saves the changes with a descriptive message.
+	• list: Shows a list of all stashes.
+	• apply [stash]: Applies the changes in the specified stash to the working directory.
+20. git tag: Creates and manages tags in the repository.
+	• -a [tag]: Creates an annotated tag with a descriptive message.
+	• -d [tag]: Deletes a tag.
+21. git submodule: Manages submodules in the repository.
+	• add [repository] [path]: Adds a new submodule to the repository.
+	• update --init --recursive: Initializes and updates all submodules recursively.
+22. git bisect: Helps find the commit that introduced a bug by performing a binary search through the commit history.
+	• start: Starts the bisecting process.
+	• good [commit]: Marks a commit as good.
+	• bad [commit]: Marks a commit as bad.
+	• reset: Resets the bisecting process.
+23. git blame [file]: Shows who made each change to a file and when it was made.
+24. git cherry-pick [commit]: Applies the changes from a specific commit to the current branch.
+25. git submodule: Manages submodules, which are separate Git repositories embedded within a parent repository.
+26. git branch -d [branch name]: Deletes a branch that has already been merged into the current branch.
+27. git branch -m [new branch name]: Renames the current branch to a new name.
+28. git pull --rebase: Fetches changes from the remote repository and rebases the local commits on top of the fetched changes.
+29. git log --oneline: Displays a condensed version of the commit history, showing only the commit message and hash.
+30. git commit --amend: Modifies the most recent commit, allowing you to add or modify files or edit the commit message.
+31. git show [commit]: Displays the changes made in a specific commit.
+32. git remote add [remote name] [remote URL]: Adds a new remote repository to the current repository.
+33. git remote rm [remote name]: Removes a remote repository from the current repository.
+34. git stash pop: Applies the changes saved in the most recent stash to the current branch.
+35. git cherry-pick [commit1] [commit2]: Applies the changes from multiple commits to the current branch.
+36. git bisect: Helps identify the commit that introduced a bug.
+
+
+
+
+
+

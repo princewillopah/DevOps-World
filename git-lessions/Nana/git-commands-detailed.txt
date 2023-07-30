@@ -1,0 +1,11 @@
+Branch: 
+- You can create branches on the portal/dashboard(remotely) and via CLI(Locally). If it is created on portal, you have to run git pull, for it to be reflected on the local repo.
+- git pull is enough to get all the changes done and update the local repos
+- git pull [remote] [branch]: Fetches changes from the remote repository and merges them with the local repository
+- git branch: Shows a list of all branches in the repository
+- git checkout [branch]: Switches to the specified branch.
+- git checkout -b [branch]: Creates a new branch and switches to the specified branch.
+- git merge [branch]: Merges the specified branch into the current branch.
+          --no-ff: Forces a merge commit even if the merge is a fast-forward.
+- git branch -d [branch name]: Deletes a branch that has already been merged into the current branch.
+- git branch -m [new branch name]: Renames the current branch to a new name.
