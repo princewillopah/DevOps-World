@@ -10,9 +10,11 @@ services:
     image: mongo
     environment:
       MONGO_INITDB_ROOT_USERNAME: princewillopah
-      MONGO_INITDB_ROOT_PASSWORD: PRINCEWILL@#1980
+      MONGO_INITDB_ROOT_PASSWORD: PRINCEWILL1980
     volumes:
       - node-app-mongo-db:/data/db
+    ports:
+      - "27017:27017"
 
 volumes:
   node-app-mongo-db:
