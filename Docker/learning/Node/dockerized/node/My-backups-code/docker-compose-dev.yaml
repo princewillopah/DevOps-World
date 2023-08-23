@@ -11,15 +11,19 @@ services:
       #anonymous volume
       - /app/node_modules
           
-    env_file:
-        - ./config/.env
+    environment:
+      #to run on dev env 
+      - NODE_ENV=development
+      - MONGO_USER=princewillopah
+      - MONGO_PASSWORD=PRINCEWILL1980
       #this wil overide the CMD ["node","server.js"] in the dockerfile
     command: npm run dev
 
   #mongo DB config
 
   mongo:
-    env_file:
-      - ./config/.env
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: princewillopah
+      MONGO_INITDB_ROOT_PASSWORD: PRINCEWILL1980 
 
     
