@@ -11,11 +11,7 @@ services:
       #anonymous volume
       - /app/node_modules
           
-    environment:
-      #to run on dev env 
-      - NODE_ENV=development
-      - MONGO_USER=princewillopah
-      - MONGO_PASSWORD=PRINCEWILL1980
+
       #this wil overide the CMD ["node","server.js"] in the dockerfile
     command: npm run dev
 
